@@ -1,0 +1,391 @@
+@font-face {
+  font-family: "Pricedown";
+  src: url("pricedown_bl.ttf");
+}
+
+body {
+  background-color: #210100;
+  font-family: "Pricedown";
+}
+
+.main {
+  position: relative;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 900px;
+  background-color: #230101;
+  left: 50px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: #230101;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.banner {
+  width: 100%;
+  height: 100px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.tabs.tabs-active {
+  background-color: #e0e0e0;
+  background-image: linear-gradient(#e0e0e0, #e0e0e0);
+  color: #000000;
+}
+
+.tabs.tabs-active:hover {
+  background-color: #e0e0e0;
+  background-image: linear-gradient(#e0e0e0, #e0e0e0);
+  cursor: unset;
+  color: #000000;
+}
+
+.tabs {
+  flex: 1;
+  width: 99%;
+  height: 50px;
+  background-image: linear-gradient(#ff0000, #960000);
+  border-radius: 5%;
+  border: 1px solid white;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-family: 'Pricedown';
+  font-size: 18px;
+  /*font-weight: bold;*/
+  color: #eeeeee;
+}
+
+.tabs:hover {
+  background-image: linear-gradient(#ff0000, #320000);
+}
+
+.fegyversor {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 300px;
+  background-color: #230101;
+}
+
+.fegyversor:first-child {
+  margin-top: 5px;
+}
+
+/*
+.fegyverek {
+  width: 30%;
+  height: 80%;
+  background-color: #ff0000;
+  text-align: center;
+  line-height: 80px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+*/
+
+.fegyverek {
+  width: 30%;
+  height: auto;
+  background-color: #230101;
+  text-align: center;
+  color: #e0e0e0;
+  /*font-weight: bold;*/
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured,
+#melee,
+#handguns,
+#submachineguns,
+#shotguns,
+#assaultrifles,
+#lightmachineguns,
+#sniperrifles,
+#heavyweapons,
+#throwables,
+#miscellaneous {
+  background-color: #230101;
+  overflow-y: scroll;
+  height: 700px;
+  border: 1px solid white;
+  position: relative;
+  top: -40px;
+}
+
+#featured {
+  display: block;
+}
+
+#melee {
+  display: none;
+}
+
+#handguns {
+  display: none;
+}
+
+#submachineguns {
+  display: none;
+}
+
+#shotguns {
+  display: none;
+}
+
+#assaultrifles {
+  display: none;
+}
+
+#lightmachineguns {
+  display: none;
+}
+
+#sniperrifles {
+  display: none;
+}
+
+#heavyweapons {
+  display: none;
+}
+
+#throwables {
+  display: none;
+}
+
+#miscellaneous {
+  display: none;
+}
+
+
+
+
+
+.weapon-card {
+  width: 100%;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Pricedown";
+  color: white;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+
+
+.card-header {
+  background: #E0E0E0;
+  color: black;
+  padding: 8px;
+  font-size: 24px;
+  /*font-weight: bold;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.fa-solid fa-gun {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.weapon-image {
+  width: 450px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.weapon-image img {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+
+.weapon-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.weapon-price {
+  background: #C00000;
+  padding: 3px 6px;
+  border-radius: 3px;
+  /*font-weight: bold;*/
+  font-size: 25px;
+}
+
+.weapon-name {
+  font-size: 20px;
+}
+
+.fegyverkepek {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.modal-content img {
+  width: 200px;
+  height: auto;
+}
+
+.close {
+  position: relative;
+  left: 95px;
+  bottom: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.kosarbagomb {
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(#ff0000, #960000);
+  border-radius: 5%;
+  border: 1px solid white;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-family: 'Pricedown';
+  font-size: 20px;
+  /*font-weight: bold;*/
+  color: #e0e0e0;
+}
+
+
+.kosar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  background-image: linear-gradient(#ff0000, #960000);
+  border-radius: 5%;
+  border: 1px solid white;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-family: 'Pricedown';
+  font-size: 20px;
+  /*font-weight: bold;*/
+  color: #e0e0e0;
+}
+
+.kosar:hover {
+  background-image: linear-gradient(#ff0000, #320000);
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: white;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+
+#cartTable {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  width: 400px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: none;
+  color: black;
+}
+
+.torlesgomb {
+  flex: 1;
+  width: 25px;
+  height: 25px;
+  background-image: linear-gradient(#ff0000, #960000);
+  border-radius: 5%;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  font-size: 15px;
+  /*font-weight: bold;*/
+  color: #e0e0e0;
+}
+
+.purchasegomb {
+  flex: 1;
+  width: 100px;
+  height: 35px;
+  font-family: 'Pricedown';
+  background-image: linear-gradient(#ff0000, #960000);
+  border-radius: 5%;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  font-size: 15px;
+  /*font-weight: bold;*/
+  color: #e0e0e0;
+}

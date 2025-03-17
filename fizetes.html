@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <script src="fizetes.js"></script>
+  <title>Fizetés</title>
+</head>
+
+<body>
+  <input type="tel" maxlength="16" min="1000000000000000" max="9999999999999999" placeholder="Kártyaszám" required> <br>
+  <input type="text" maxlength="5" placeholder="Lejárati dátum" required><br>
+  <input type="password" maxlength="3" placeholder="CVC/CVV"><br>
+  <input type="text" placeholder="Kártyára írt név"><br>
+  <span>Fizetendő ár:</span>
+  <span id="totalprice">0$</span><br>
+
+  <button onclick="kuldes()">Fizetés</button>
+</body>
+
+</html>
